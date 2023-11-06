@@ -1,0 +1,25 @@
+Issues
+1 - I am able to delete the "You" record
+Expected Result: The user should not be able to delete the "You" row from the table
+Actual Result: Pressing delete on the "You" row deletes the record
+
+2 - Timezones are sorted incorrectly
+Expected Result: Timezones should be sorted with earliest time first and latest time last 
+Actual Result: Timezones are instead sorted in alphabetical order of name, with the "You" record always at the top
+
+3 - Creating a record with a selected timezone that has an existing record replaces that record instead of creating a new one
+Expected Result: **Need to check requirements** Assuming that a new record should be created instead of replace the label on the old one
+Actual result: The label on the existing record is replaced, this can occur with the "You" record as well
+
+4 - The app only has 6 timezones available
+
+5 - Creating an extremely long label (i.e "wwwwwwwwww...") breaks the ui
+Expected Result: Name should be shortened with "..." or similar
+Actual Result: Timezone and Local Time columns are push out of the table dimensions
+
+6 - Local Time shown does not update in real time
+Expected Result: When time advances to the next minute, so should the value shown in the app
+Actual Result: The value in the app does not update until the user clicks on an element (Add timezone, delete button, etc.)
+
+7 - Unhandled runtime error (think this one is just an error with my Node.js configuration but including it just in case)
+Actual Result: Runtime error shows when trying to refresh the page
